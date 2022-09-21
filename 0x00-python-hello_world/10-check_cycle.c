@@ -16,16 +16,14 @@ int check_cycle(listint_t *head)
 		return (0);
 
 	ap = head->next;
-	gp = list->next->next;
+	gp = head->next->next;
 
 	while (gp && gp->next)
 	{
 		if (ap == gp)
 			return (1);
-
 		ap = ap->next;
 		gp = ap->next->next;
 	}
-
 	return (0);
 }
