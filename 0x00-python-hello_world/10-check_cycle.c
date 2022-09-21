@@ -6,78 +6,26 @@
  *
  * Return: 1 if it's a circular link, 0 if not
  */
-int check_cycle(listint_t *list)
-{
-	listint_t *tortoise, *hare;
-
-	if (list == NULL || list->next == NULL)
-		return (0);
-
-	tortoise = list->next;
-	hare = list->next->next;
-
-	while (hare && hare->next)
-	{
-		if (tortoise == hare)
-			return (1);
-
-		tortoise = tortoise->next;
-		hare = hare->next->next;
-	}
-
-	return (0);
-}
-
-/*
 int check_cycle(listint_t *head)
 {
-	listint_t **arr = NULL, *temp = NULL;
-	int i = 0, j;
+	listint_t *ap, *gp;
+        /* ap stands for arithmetic progression
+           and gp for geometric progression */
 
-	temp = head;
-	while (temp)
+	if (head == NULL || head->next == NULL)
+		return (0);
+
+	ap = head->next;
+	gp = list->next->next;
+
+	while (gp && gp->next)
 	{
-		i++;
-		arr = create_arr_of_list(head, i);
-		temp = temp->next;
-		for (j = 0; j < i; j++)
-		{
-			if (temp == arr[j])
-			{
-				free(arr);
-				return (1);
-			}
-		}
-		free(arr);
+		if (ap == gp)
+			return (1);
+
+		ap = ap->next;
+		gp = ap->next->next;
 	}
+
 	return (0);
 }
-*/
-
-/**
- * create_arr_of_list - create an arr from a linked list
- * @head: pointer to the head of the linked list
- * @n: number of elements to be added to the array
- *
- * Return: pointer to the array of nodes linked list
- */
- /*
-listint_t **create_arr_of_list(listint_t *head, int n)
-{
-	int i = 0;
-	listint_t **arr;
-
-	if (head == NULL)
-		return (NULL);
-	arr = malloc(sizeof(listint_t *) * n);
-	if (!arr)
-		return (NULL);
-
-	for (i = 0; i < n && head; i++)
-	{
-		arr[i] = head;
-		head = head->next;
-	}
-	return (arr);
-}
- */
