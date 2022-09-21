@@ -6,11 +6,11 @@
  *
  * Return: 1 if it's a circular link, 0 if not
  */
+
 int check_cycle(listint_t *head)
 {
 	listint_t *ap, *gp;
-        /* ap stands for arithmetic progression
-           and gp for geometric progression */
+/* ap stands for arithmetic progression, gp for geometric progression */
 
 	if (head == NULL || head->next == NULL)
 		return (0);
