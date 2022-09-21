@@ -23,7 +23,7 @@ int check_cycle(listint_t *head)
 		if (ap == gp)
 			return (1);
 		ap = ap->next;
-		gp = ap->next->next;
+		gp = gp->next->next;
 	}
 	return (0);
 }
