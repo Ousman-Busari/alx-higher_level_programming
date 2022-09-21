@@ -6,7 +6,29 @@
  *
  * Return: 1 if it's a circular link, 0 if not
  */
+int check_cycle(listint_t *list)
+{
+	listint_t *tortoise, *hare;
 
+	if (list == NULL || list->next == NULL)
+		return (0);
+
+	tortoise = list->next;
+	hare = list->next->next;
+
+	while (hare && hare->next)
+	{
+		if (tortoise == hare)
+			return (1);
+
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+	}
+
+	return (0);
+}
+
+/*
 int check_cycle(listint_t *head)
 {
 	listint_t **arr = NULL, *temp = NULL;
@@ -30,7 +52,7 @@ int check_cycle(listint_t *head)
 	}
 	return (0);
 }
-
+*/
 
 /**
  * create_arr_of_list - create an arr from a linked list
@@ -39,7 +61,7 @@ int check_cycle(listint_t *head)
  *
  * Return: pointer to the array of nodes linked list
  */
-
+ /*
 listint_t **create_arr_of_list(listint_t *head, int n)
 {
 	int i = 0;
@@ -58,3 +80,4 @@ listint_t **create_arr_of_list(listint_t *head, int n)
 	}
 	return (arr);
 }
+ */
