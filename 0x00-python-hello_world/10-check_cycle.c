@@ -10,7 +10,6 @@
 int check_cycle(listint_t *head)
 {
 	listint_t *ap, *gp;
-/* ap stands for arithmetic progression, gp for geometric progression */
 
 	if (head == NULL || head->next == NULL)
 		return (0);
