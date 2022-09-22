@@ -8,7 +8,7 @@ if __name__ == "__main__":
     if ac != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    ac == 4:
+
     a = int(av[1])
     op = av[2]
     b = int(av[3])
