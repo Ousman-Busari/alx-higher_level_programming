@@ -8,18 +8,18 @@ if __name__ == "__main__":
     if ac != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    if ac == 4:
-        a = int(av[1])
-        b = int(av[3])
-        if av[2] == "+":
-            result = add(a, b)
-        elif av[2] == "-":
-            result = sub(a, b)
-        elif av[2] == "*":
-            result = mul(a, b)
-        elif av[2] == "/":
-            result = div(a, b)
-        else:
-            print("Unknown operator. Available operators: +, -, * and /")
-            sys.exit(1)
-        print(result)
+    ac == 4:
+    a = int(av[1])
+    op = av[2]
+    b = int(av[3])
+    if op == "+":
+        print("{} + {} = {}".format(a, b, add(a, b)))
+    elif op == "-":
+        print("{} - {} = {}".format(a, b, sub(a, b)))
+    elif op == "*":
+        print("{} * {} = {}".format(a, b, mul(a, b)))
+    elif op == "/":
+        print("{} / {} = {}".format(a, b, int(div(a, b))))
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
