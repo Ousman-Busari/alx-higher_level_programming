@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 def search_replace(my_list, search, replace):
+    new_list = my_list[:]
     i = my_list.index(search)
-    my_list[i] = replace
-    return my_list
+    new_list[i] = replace
+    return new_list
