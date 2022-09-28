@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    for i in range(len(roman_string)):
+        if roman_dict.get(roman_string[i], 0) == 0:
+            return 0
+
     if roman_string is not None:
         roman_int = {'M': 100, 'D': 500, 'C': 100, 'L': 50,
                      'X': 10, 'V': 5, 'I': 1}
@@ -17,7 +21,4 @@ def roman_to_int(roman_string):
         integer += roman_int[roman_digits[size - 1]]
         return integer
     else:
-        for i in range(len(roman_string)):
-                if roman_dict.get(roman_string[i], 0) == 0:
-                                return 0
         return 0
