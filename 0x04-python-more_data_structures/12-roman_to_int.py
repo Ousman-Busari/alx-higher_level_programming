@@ -17,4 +17,7 @@ def roman_to_int(roman_string):
         integer += roman_int[roman_digits[size - 1]]
         return integer
     else:
+        for i in range(len(roman_string)):
+                if roman_dict.get(roman_string[i], 0) == 0:
+                                return 0
         return 0
