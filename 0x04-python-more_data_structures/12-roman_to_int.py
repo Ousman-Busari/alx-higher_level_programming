@@ -18,7 +18,7 @@ def roman_to_int(roman_string):
 
         for i in range(size - 1):
             if roman_int[roman_digits[i]] < roman_int[roman_digits[i + 1]]:
-                integer -= roman_int[roman_digits[i]]
+                integer += roman_int[roman_digits[i]] * -1
             else:
                 integer += roman_int[roman_digits[i]]
 
