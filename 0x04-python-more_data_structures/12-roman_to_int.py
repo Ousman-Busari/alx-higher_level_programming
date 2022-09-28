@@ -8,8 +8,10 @@ def roman_to_int(roman_string):
         if roman_int.get(roman_string[i], 0) == 0:
             return 0
 
+    if roman_string is None:
+        return 0
 
-    if roman_string is not None:
+    elif roman_string is not None:
 
         roman_digits = list(roman_string)
         integer = 0
