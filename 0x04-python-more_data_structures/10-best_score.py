@@ -2,7 +2,7 @@
 
 def best_score(a_dictionary):
     if a_dictionary is not None:
-        if is isinstance(a_dictionary, dict):
+        if isinstance(a_dictionary, dict):
             max = 0
             for key in a_dictionary:
                 if a_dictionary[key] > max:
