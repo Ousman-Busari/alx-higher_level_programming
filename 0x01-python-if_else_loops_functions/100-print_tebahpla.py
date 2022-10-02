@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
-d = 122
-for i in range(26):
-    if (d > 90):
-        print(chr(d), end="")
-        d -= 33
+for i in range(122, 96, -1):
+    if (i % 2 == 0):
+        print(chr(i), end="")
     else:
-        print(chr(d), end="")
-        d += 31
+        j = i - 32
+        print(chr(j), end="")
