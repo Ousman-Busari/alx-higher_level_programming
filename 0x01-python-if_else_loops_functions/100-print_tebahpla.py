@@ -2,7 +2,7 @@
 
 for i in range(122, 96, -1):
     if (i % 2 == 0):
-        print(chr(i), end="")
+        print("{}".format(chr(i)), end="")
     else:
         j = i - 32
-        print(chr(j), end="")
+        print("{}".format(chr(j)), end="")
