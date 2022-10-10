@@ -8,4 +8,4 @@ def safe_function(fct, *args):
         return (fct(*args))
     except Exception as exc:
         print("Exception:", exc, file=sys.stderr)
-        return(False)
+        return
