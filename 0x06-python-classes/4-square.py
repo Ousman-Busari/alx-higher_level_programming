@@ -29,15 +29,16 @@ class Square:
 
     @property
     def size(self):
-        """use to retrieve the property of attribute size of a square object
+        """retrieves the property of attribute size of a square object
 
         Return:
                size of the square
         """
         return self.__size
+
     @size.setter
     def size(self, value):
-        """use to set the property of attribute size of a square object
+        """sets the property of attribute size of a square object
 
         Args:
              value(int): the new size of the square object
