@@ -2,5 +2,6 @@
 
 
 class Square:
-    """An emty class"""
+    """An emty class
+    """
     pass
