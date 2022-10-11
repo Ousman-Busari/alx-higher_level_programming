@@ -6,9 +6,9 @@ class Square:
     """class representation of a Square
 
     Attributes:
-             __size(int): size of the side of the square
+               __size(int): size of the side of the square
     """
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """Initiliaze an instance of the square
 
         Args:
