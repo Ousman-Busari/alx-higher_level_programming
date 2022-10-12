@@ -67,10 +67,13 @@ class Square:
         Return:
               None
         """
-        if type(value[0]) is int and type(value[1]) is int:
-            self.__position = value
-        else:
+        if (type(value) is not tuple or\
+        len(value) != 2 or\
+        not all(type(point) is int for point in value) or\
+        not all(point >= 0 for point in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
+
+        self.__position = value
 
     def area(self):
         """Calculates the area of the square
