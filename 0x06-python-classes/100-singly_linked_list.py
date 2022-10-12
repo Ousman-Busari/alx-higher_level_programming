@@ -1,72 +1,43 @@
 #!/usr/bin/python3
-"""singly-linked list"""
+""" A singly-linked list"""
 
 
 class Node:
-    """defines the node of a singly-linked list
 
-    Attributes:
-              data(int): integer data of the node
-              next_node: the next node Object
-    """
     def __init__(self, data, next_node=None):
-        """Initiliazes an instance of the square
+        """ Initiliazes an instance of the square"""
 
-        Args:
-             data(int): the ineteger data at the node object
-             next_node: the next node object on the list
-
-        Return:
-               None
-        """
         self.data = data
         self.next_node = next_node
 
-        @property
-        def data(self):
-            """retrieves the data attribute of a Node object
 
-            Return:
-                   the data of the object Node
-            """
-            return self.__data
+    @property
+    def data(self):
+        """ Retrieves the value of data """
 
-        @data.setter
-        def data(self, value):
-            """retrieves the data attribute of a Node object
+        return self.__data
 
-            Args:
-                 value(int): the new data of the node object
+    @data.setter
+    def data(self, value):
+        """ Sets the value of the data attributes """
 
-            Return:
-                   None
-            """
-            if not isinstance(value, int):
-                raise TypeError("data must be an integer")
-            self.__data = value
+        if not isinstance(value, int):
+            raise TypeError("data must be an integer")
+        self.__data = value
 
-        @property
-        def next_node(self):
-            """retrieves the next_node attribute of a Node object
+    @property
+    def next_node(self):
+        """ Retrieves the value of next_noded """
 
-            Return:
-                   the next node of the object Node
-            """
-            return(self.__next_node)
+        return(self.__next_node)
 
-        @next_node.setter
-        def next_node(self, value):
-            """retrieves the next_node attribute of a Node object
+    @next_node.setter
+    def next_node(self, value):
+        """ Sets the value of the data attributes """
 
-            Args:
-                 next_node(Node): the new data of the node object
-
-            Return:
-                   None
-            """
-            if value is not None and type(value) is not Node:
-                raise TypeError("next_node must be a Node object")
-            self.__next_node = value
+        if value is not None and type(value) is not Node:
+            raise TypeError("next_node must be a Node object")
+        self.__next_node = value
 
 
 class SinglyLinkedList:
