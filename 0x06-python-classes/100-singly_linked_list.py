@@ -3,7 +3,7 @@
 
 
 class Node:
-
+""" A node of a singly linked list """
     def __init__(self, data, next_node=None):
         """ Initiliazes an instance of the square
 
