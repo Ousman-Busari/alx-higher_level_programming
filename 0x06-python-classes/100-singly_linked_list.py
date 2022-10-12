@@ -29,7 +29,7 @@ class Node:
             Return:
                    the data of the object Node
             """
-            return(self.__data)
+            return self.__data
 
         @data.setter
         def data(self, value):
@@ -41,10 +41,9 @@ class Node:
             Return:
                    None
             """
-            if type(value) is int:
-                self.__data = value
-            else:
+            if not isinstance(value, int):
                 raise TypeError("data must be an integer")
+            self.__data = value
 
         @property
         def next_node(self):
@@ -55,7 +54,7 @@ class Node:
             """
             return(self.__next_node)
 
-        @data.setter
+        @next_node.setter
         def next_node(self, value):
             """retrieves the next_node attribute of a Node object
 
@@ -65,10 +64,9 @@ class Node:
             Return:
                    None
             """
-            if type(value) is Node:
-                self.__next_node = value
-            else:
+            if value is not None and type(value) is not Node:
                 raise TypeError("next_node must be a Node object")
+            self.__next_node = value
 
 
 class SinglyLinkedList:
