@@ -7,7 +7,7 @@ class Node:
     def __init__(self, data, next_node=None):
         """ Initiliazes an instance of the square
 
-        Args:
+        Attributes:
              data(int): data of the new instance of the clas
              next_node(Node): the next node on the singly linked list
 
