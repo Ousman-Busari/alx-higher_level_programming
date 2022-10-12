@@ -5,7 +5,15 @@
 class Node:
 
     def __init__(self, data, next_node=None):
-        """ Initiliazes an instance of the square"""
+        """ Initiliazes an instance of the square
+
+        Args:
+             data(int): data of the new instance of the clas
+             next_node(Node): the next node on the singly linked list
+
+        Return:
+               None
+        """
 
         self.data = data
         self.next_node = next_node
@@ -13,13 +21,24 @@ class Node:
 
     @property
     def data(self):
-        """ Retrieves the value of data """
+        """ Retrieves the value of data
+
+        Return:
+               None
+        """
 
         return self.__data
 
     @data.setter
     def data(self, value):
-        """ Sets the value of the data attributes """
+        """ Sets the value of the data attributes
+
+        Args:
+             value(int): new data of the Node Object
+
+        Return:
+               None
+        """
 
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
@@ -27,13 +46,24 @@ class Node:
 
     @property
     def next_node(self):
-        """ Retrieves the value of next_noded """
+        """ Retrieves the value of next_noded
+
+        Return:
+               None
+        """
 
         return(self.__next_node)
 
     @next_node.setter
     def next_node(self, value):
-        """ Sets the value of the data attributes """
+        """ Sets the value of the data attributes
+
+        Args:
+             value(Node): new data of the Node Object
+
+        Return:
+               None
+        """
 
         if value is not None and type(value) is not Node:
             raise TypeError("next_node must be a Node object")
