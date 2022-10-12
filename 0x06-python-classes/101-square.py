@@ -113,15 +113,11 @@ class Square:
             return(''.join(string))
 
         for i in range(self.__position[1]):
-            #print()
             string.append('\n')
         for i in range(self.__size):
-            #print(" " * self.__position[0], end='')
             string.append(self.__position[0] * ' ')
             for j in range(self.size):
-                #print('#', end='')
                 string.append('#')
-            #print()
             if i < (self.__size - 1):
                 string.append('\n')
         return(''.join(string))
