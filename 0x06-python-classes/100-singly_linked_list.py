@@ -18,7 +18,6 @@ class Node:
         self.data = data
         self.next_node = next_node
 
-
     @property
     def data(self):
         """ Retrieves the value of data
