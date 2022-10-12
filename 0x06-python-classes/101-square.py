@@ -89,7 +89,6 @@ class Square:
         Return:
                None
         """
-
         if self.size == 0:
             print()
             return
