@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ A module use to contain a class"""
 
+
 class Rectangle:
     """ A class definiton of a rectangle"""
 
