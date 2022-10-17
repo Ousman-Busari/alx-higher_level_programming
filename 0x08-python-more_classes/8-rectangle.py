@@ -83,7 +83,8 @@ class Rectangle:
     def __repr__(self):
         """ Defines parsable string representation of rectangle objects"""
 
-        return ('Rectangle(' + str(self.__width) + ', ' + str(self.__height) + ')')
+        return ('Rectangle(' + str(self.__width) + ', ' +
+                str(self.__height) + ')')
 
     def __del__(self):
         """ prints to stdout when a rectangle is deleted """

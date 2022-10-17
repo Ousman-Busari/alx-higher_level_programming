@@ -68,7 +68,7 @@ class Rectangle:
     def square(cls, size=0):
         """ creates a new Rectangle instance with width == height == size """
         return cls(size, size)
-    
+
     def __str__(self):
         """ Defines the string representation of rectangle """
 
@@ -87,7 +87,8 @@ class Rectangle:
     def __repr__(self):
         """ Defines parsable string representation of rectangle objects"""
 
-        return ('Rectangle(' + str(self.__width) + ', ' + str(self.__height) + ')')
+        return ('Rectangle(' + str(self.__width) + ', ' +
+                str(self.__height) + ')')
 
     def __del__(self):
         """ prints to stdout when a rectangle is deleted """
