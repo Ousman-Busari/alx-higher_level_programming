@@ -6,6 +6,7 @@ or float(of the rigth value)
 The name of the function is add_integer
 """
 
+
 def add_integer(a, b):
     """
     add two integers - or float of the right value - a and b
