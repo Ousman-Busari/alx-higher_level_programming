@@ -16,17 +16,16 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError('text must be a string')
-
     char_list = ['.', '?', ':']
-    prev_i = None
+    i = 0
 
-    for i in range(len(text)):
-        if prev_i in char_list and text[i] == ' ':
-            print()
+    while i < len(text):
+        print(text[i], end='')
+
+        if text[i] in char_list:
+            print('\n')
+            i += 1
+            while i < len(text) and text[i] == ' ':
+                i += 1
             continue
-        if text[i] in char_list and text[i + 1] == ' ':
-            print(text[i])
-            prev_i = text[i]
-        else:
-            print(text[i], end='')
-            prev_i = text[i]
+        i += 1
