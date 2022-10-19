@@ -6,6 +6,7 @@ any of these characters ., ? and : is encountered
 The name of function is text_indentation
 """
 
+
 def text_indentation(text):
     """
     Prints out a text provided as argument
