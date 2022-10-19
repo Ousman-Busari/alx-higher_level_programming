@@ -8,7 +8,7 @@ Args types and Number
 ================================
 checking args of string types:
 	 >>> say_my_name("John", "Smith")
-	 John Smith
+	 My name is John Smith
 
 checking first_name of non-string:
 	>>> say_my_name(898, "Smith")
