@@ -20,13 +20,13 @@ def text_indentation(text):
     char_list = ['.', '?', ':']
     prev_i = None
 
-    for i in text:
-        if prev_i in char_list and i == ' ':
+    for i in range(len(text)):
+        if prev_i in char_list and text[i] == ' ':
             print()
             continue
-        if i in char_list:
-            print(i)
-            prev_i = i
+        if text[i] in char_list and text[i + 1] == ' ':
+            print(text[i])
+            prev_i = text[i]
         else:
-            print(i, end='')
-            prev_i = i
+            print(text[i], end='')
+            prev_i = text[i]
