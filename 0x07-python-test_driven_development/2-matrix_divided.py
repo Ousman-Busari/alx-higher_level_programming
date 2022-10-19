@@ -35,10 +35,7 @@ def matrix_divided(matrix, div):
                type(matrix[i][j]) is not float:
                 raise TypeError('matrix must be a matrix (list of lists) of '
                                 'integers/floats')
-            if div != float('inf'):
-                inner_list.append(round(matrix[i][j] / div, 2))
-            else:
-                inner_list.append(0.0)
+            inner_list.append(round(matrix[i][j] / div, 2))
         new_matrix.append(inner_list)
 
     return new_matrix

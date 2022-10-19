@@ -55,6 +55,11 @@ checking div value:
 		  ...
 	ZeroDivisionError: division by zero
 
+checking div at infinity:
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
 
 Number of Arguments
 ======================
