@@ -6,6 +6,7 @@ The matrixes must be a list of list of int/float
 The name of function is matrix_mul
 """
 
+
 def matrix_mul(m_a, m_b):
     """
     Multiplies two matrixes when the number of column in the first matrix
@@ -22,7 +23,6 @@ def matrix_mul(m_a, m_b):
         raise TypeError('m_b must be a list')
     if len(m_b) == 0:
         raise ValueError("m_b can't be empty")
-
 
     for i in m_a:
         if type(i) is not list:
@@ -71,5 +71,5 @@ def matrix_mul(m_a, m_b):
         new_matrix.append(new_list)
     return new_matrix
 
-#print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
-#print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+# print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+# print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
