@@ -2,7 +2,7 @@
 
 /**
  * print_python_string - prints information about python strings
- * @p: the input python object
+ * @p: python string object
  *
  * Return: Nothing
  */
