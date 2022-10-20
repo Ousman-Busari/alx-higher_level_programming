@@ -34,6 +34,10 @@ class TestMaxInteger(unittest.TestCase):
         # Test the case where the max element is at the beginning
         self.assertEqual(max_integer([-14, -6, -3, -1, -7, -9]), -1)
 
+    def test_list_of_one_element(self):
+        # Test the case where the max element is at the beginning
+        self.assertEqual(max_integer([3]), 3)
+
     def test_list_of_int_and_floats(self):
         # Test the case where all elements of a list are integers
         self.assertEqual(max_integer([4, 6, 3, 1, 7, 9, 8, 2]), 9)
