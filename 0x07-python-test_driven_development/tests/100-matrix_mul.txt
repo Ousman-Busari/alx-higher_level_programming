@@ -25,7 +25,7 @@ checking a matrix of the right type with one of the wrong type:
 	 ValueError: m_b can't be empty
 
 Matrixes content checking
-========================
+===========================
 checking a int and a matrix of the right type:
 	 >>> matrix_mul([2, [5, 6]], [[1, 2], [3, 4]])
 	 Traceback (most recent call last):
@@ -52,3 +52,24 @@ checking a matrix of the right type with one of the wrong type:
 	 Traceback (most recent call last):
 	 	   ...
 	 TypeError: each row of m_a must be of the same size
+
+checking a matrix of the right type with one of the wrong type:
+	 >>> matrix_mul([[1, 2, 3], [3, 4, 8]], [[4, 3, 5], [5, 6]])
+	 Traceback (most recent call last):
+	 	   ...
+	 TypeError: each row of m_b must be of the same size
+
+
+Number of arguments
+=====================
+checking the function with one argument:
+	>>> matrix_mul([[4, 3], [5, 6]])
+	Traceback (most recent call last):
+	 	   ...
+	TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+checking the function with no argument:
+	>>> matrix_mul()
+	Traceback (most recent call last):
+	 	   ...
+	TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
