@@ -38,6 +38,24 @@ checking a matrix of the right type with one of the wrong type:
 	 	   ...
 	 TypeError: m_a should contain only integers or floats
 
+checking a matrix of the right type with one of the wrong type:
+	 >>> matrix_mul([[1, 2], [3, 4]], [['4', '3'], ['5', '6']])
+	 Traceback (most recent call last):
+	 	   ...
+	 TypeError: m_b should contain only integers or floats
+
+checking am empty matrix with one of the right type:
+	 >>> matrix_mul([[]], [[1, 2], [3, 4]])
+	 Traceback (most recent call last):
+	 	   ...
+	 ValueError: m_a can't be empty
+
+checking a mtrix of the right type with an empty one:
+	 >>> matrix_mul([[1, 2], [3, 4]], [[]])
+	 Traceback (most recent call last):
+	 	   ...
+	 ValueError: m_b can't be empty
+
 
 Matrixes size checking
 ========================
