@@ -6,4 +6,4 @@ class LockedClass:
     for an attribte called first_name
     All instances of this class also inherit this property
     """
-    __slot__ = ['first_name']
+    __slots__ = ['first_name']
