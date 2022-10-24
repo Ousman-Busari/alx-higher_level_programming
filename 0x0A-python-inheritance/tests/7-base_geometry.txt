@@ -87,6 +87,13 @@ Testing with value of dict:
 		  ...
 	TypeError: name must be an integer
 
+Testing with value of None:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name', None)
+	Traceback (most recent call last):
+		  ...
+	TypeError: name must be an integer
+
 
 Test cases of wrong number of arguments
 ==========================================
