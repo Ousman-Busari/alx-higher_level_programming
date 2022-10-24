@@ -7,6 +7,14 @@ Importing the class where the method is defines
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
+Test case for area
+====================
+	>>> bg = Basegeometry()
+	Traceback (most recent call last):
+		  ...
+	Exception: area() is not implemented
+
+
 Test cases with the wrong type of value
 =========================================
 Testing with value of string type:
