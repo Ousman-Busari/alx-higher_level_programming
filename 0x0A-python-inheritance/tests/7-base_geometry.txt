@@ -124,3 +124,10 @@ Testing with one arguement:
 	Traceback (most recent call last):
 		  ...
 	TypeError: integer_validator() takes 3 positional arguments but...
+
+Testing with non-string name type
+===================================
+	>>> bg.integer_validator({"a": 1}, (1, 2))
+   	Traceback (most recent call last):
+   	     ...
+	TypeError: unsupported operand type(s) for +: 'dict' and 'str'
