@@ -7,8 +7,10 @@ def MyInt(int):
 
     def __eq__(self, other):
         """ overrides and inverts the conditional check == """
-        return super().__ne__(other)
+
+        return self.real != other
 
     def __ne__(self, other):
         """ overrides and inverts the conditional check != """
-        return super().__eq__(other)
+
+        return self.real == other
