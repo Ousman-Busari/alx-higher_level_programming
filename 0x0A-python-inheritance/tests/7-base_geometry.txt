@@ -9,7 +9,7 @@ Importing the class where the method is defines
 
 Test case for area
 ====================
-	>>> bg = Basegeometry()
+	>>> bg = BaseGeometry()
 	>>> bg.area()
 	Traceback (most recent call last):
 		  ...
