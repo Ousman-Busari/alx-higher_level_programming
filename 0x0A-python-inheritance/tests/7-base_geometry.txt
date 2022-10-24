@@ -117,3 +117,10 @@ Testing with one arguement:
 	Traceback (most recent call last):
 		  ...
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Testing with one arguement:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name', 12, 'John') #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+		  ...
+	TypeError: integer_validator() takes 3 positional arguments but...
