@@ -25,7 +25,6 @@ Test case for area
 Test cases with the wrong type of value
 =========================================
 Testing with value of string type:
-
 	>>> bg = BaseGeometry()
 	>>> bg.integer_validator('name', "John")
 	Traceback (most recent call last):
@@ -46,6 +45,19 @@ Testing with value of 0:
 		  ...
 	ValueError: distance must be greater than 0
 
+Testing with value as list:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name', [7, 8])
+	Traceback (most recent call last):
+		  ...
+	TypeError: name must be an integer
+
+Testing with value of tuple:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name', (0,))
+	Traceback (most recent call last):
+		  ...
+	TypeError: name must be an integer
 
 Test cases of wrong number of arguments
 ==========================================
