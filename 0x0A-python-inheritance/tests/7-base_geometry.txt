@@ -66,6 +66,28 @@ Testing with value of tuple:
 		  ...
 	TypeError: name must be an integer
 
+Testing with value of bool:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name', True)
+	Traceback (most recent call last):
+		  ...
+	TypeError: name must be an integer
+
+Testing with value of set:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name', {4, 6})
+	Traceback (most recent call last):
+		  ...
+	TypeError: name must be an integer
+
+Testing with value of dict:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name', {'dict': 'Not set'})
+	Traceback (most recent call last):
+		  ...
+	TypeError: name must be an integer
+
+
 Test cases of wrong number of arguments
 ==========================================
 Testing with no arguments:
