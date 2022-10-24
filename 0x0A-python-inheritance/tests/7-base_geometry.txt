@@ -15,6 +15,12 @@ Test case for area
 		  ...
 	Exception: area() is not implemented
 
+	>>> bg = BaseGeometry()
+	>>> bg.area("arg") #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+		  ...
+	TypeError: area() takes 1 positional argument but...
+
 
 Test cases with the wrong type of value
 =========================================
