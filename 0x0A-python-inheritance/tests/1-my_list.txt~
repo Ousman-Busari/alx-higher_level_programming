@@ -1,0 +1,46 @@
+""" Test cases for MyList method, print_sorted() """
+
+
+Importing class containing the method
+========================================
+	>>> MyList = __import__('1-my_list').MyList
+
+
+Normal condition where all elements are either int and/or float
+================================================================
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+
+Test cases where not all members are int / float
+==================================================
+	>>> my_list = MyList([5, "string", 7, "type"])
+	>>> print(my_list)
+	[5, 'string', 7, 'type']
+	>>> my_list.print_sorted()
+	TypeError: '<' not supported between instances of 'str' and 'int'
+
+	>>> my_list = MyList(["string", 5, 7, 2, "type"])
+	>>> print(my_list)
+	['string', 5, 7, 2, 'type']
+	>>> my_list.print_sorted()
+	TypeError: '<' not supported between instances of 'int' and 'str'
+
+Test case where the list is empty
+=====================================
+	>>> my_list = MyList()
+	>>> print(my_list)
+	[]
+	>>> my_list.print_sorted()
+	[]
+	>>> print(my_list)
+	[]

@@ -1,0 +1,49 @@
+""" Module containing the test cases for method integer_validator
+found in the class BaseGeometry
+"""
+
+Importing the class where the method is defines
+==================================================
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Test cases with the wrong type of value
+=========================================
+Testing with value of string type:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name', "John")
+	Traceback (most recent call last):
+		  ...
+	TypeError: name must be an integer
+
+Testing with value less than 0:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('age', -4)
+	Traceback (most recent call last):
+		  ...
+	ValueError: age must be greater than 0
+
+Testing with value of 0:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('distance', 0)
+	Traceback (most recent call last):
+		  ...
+	ValueError: distance must be greater than 0
+
+
+Test cases of wrong number of arguments
+==========================================
+Testing with no arguments:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+		  ...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Testing with one arguement:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator('name')
+	Traceback (most recent call last):
+		  ...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
