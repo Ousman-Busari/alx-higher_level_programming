@@ -12,7 +12,7 @@ def append_after(filename="", search_string="", new_string=""):
         list_all_lines = f.readlines()
 
     new_content = []
-    line_num = 0;
+    line_num = 0
     for line in list_all_lines:
         new_content.append(line)
         if search_string in line:

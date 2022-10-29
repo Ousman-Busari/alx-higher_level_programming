@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 """
 12-pascal_triangle
 """
@@ -10,9 +10,9 @@ def pascal_triangle(n):
     """
     triangle = []
     if n <= 0 or type(n) is not int:
-        return triangle;
+        return triangle
 
-    for i in range (n):
+    for i in range(n):
         row = []
         j = 0
         while j <= i:
