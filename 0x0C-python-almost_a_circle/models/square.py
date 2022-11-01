@@ -18,7 +18,14 @@ class Square(Rectangle):
     def size(self):
         """ gets the size of the square """
         return self.width
+
     @size.setter
     def size(self, value):
-        size.width = value
-        size.height = value
+        self.width = value
+        self.height = value
+
+    def __str__(self):
+        """ str representation of an instance of Sqaure """
+        string = "[Square] ({}) {}/{} - {}".format(self.id,
+                                                   self.x, self.y, self.size)
+        return string
