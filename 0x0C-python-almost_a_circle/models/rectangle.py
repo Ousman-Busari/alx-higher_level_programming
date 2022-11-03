@@ -24,6 +24,7 @@ class Rectangle(Base):
     def width(self):
         """ gets the width of the instance """
         return self.__width
+
     @width.setter
     def width(self, value):
         """ sets the width of the instance """
@@ -37,6 +38,7 @@ class Rectangle(Base):
     def height(self):
         """ gets the height of the instance """
         return self.__height
+
     @height.setter
     def height(self, value):
         """ sets the height of the instance """
@@ -50,6 +52,7 @@ class Rectangle(Base):
     def x(self):
         """ gets the x attribute of the instance """
         return self.__x
+
     @x.setter
     def x(self, value):
         """ sets the x attribute of the instance """
@@ -63,6 +66,7 @@ class Rectangle(Base):
     def y(self):
         """ gets the y attribute of the instance """
         return self.__y
+
     @y.setter
     def y(self, value):
         """ sets the y attribute of the instance """
@@ -95,11 +99,10 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
 
-
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute """
         if args and len(args) > 0:
-            if args[0] != None:
+            if args[0] is not None:
                 self.id = args[0]
             if len(args) > 1:
                 self.width = args[1]

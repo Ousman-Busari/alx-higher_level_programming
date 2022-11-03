@@ -9,6 +9,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 import unittest
 
+
 class TestSquare_init(unittest.TestCase):
     """ defines test cases for the initliazation of instance of Square """
 
@@ -69,6 +70,7 @@ class TestSquare_order_of_initialization(unittest.TestCase):
     def test_x_before_y(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(4, "x", "y")
+
 
 class TestSquare_update_args(unittest.TestCase):
     """ defines test cases for the update method of Square using args """
@@ -182,7 +184,8 @@ class TestSquare_update_kwargs(unittest.TestCase):
     def test_update_kwargs_all_absent(self):
         s = Square(4, 2, 3, 7)
         s.update(absent="8", key="5", word="7")
-        self.assertEqual("[Square] (7) 2/3 - 4",str(s))
+        self.assertEqual("[Square] (7) 2/3 - 4", str(s))
+
 
 class TestSquare_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Square class."""
@@ -202,6 +205,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()

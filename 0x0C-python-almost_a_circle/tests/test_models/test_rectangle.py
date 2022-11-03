@@ -148,7 +148,6 @@ class TestRectangle_init(unittest.TestCase):
         self.assertEqual(r.id, 9)
 
 
-
 class TestRectangle_width(unittest.TestCase):
     """ defines test cases of the width attribute of Rectangle """
 
@@ -535,9 +534,7 @@ class TestRectangle_initialization_order(unittest.TestCase):
 
 class TestRectangle_area(unittest.TestCase):
     """ defines test cases for the area method Rectangle instance """
-
     def test_area_small(self):
-        """ test with right data types and values """
         r = Rectangle(2, 10, 4, 3, 12)
         self.assertEqual(r.area(), 20)
 
@@ -549,6 +546,7 @@ class TestRectangle_area(unittest.TestCase):
         r = Rectangle(2, 10, 4, 3, 12)
         with self.assertRaises(TypeError):
             r.area(1)
+
 
 class TestRectangle_stdout(unittest.TestCase):
     """ test cases for __str__ and display methods of Rectangle instances """
@@ -644,16 +642,16 @@ class TestRectangle_update_args(unittest.TestCase):
         self.assertEqual("[Rectangle] (89) 10/10 - 2/10", str(r))
 
     def test_update_args_three(self):
-         """ call update with three args """
-         r = Rectangle(10, 10, 10, 10)
-         r.update(89, 2, 3)
-         self.assertEqual("[Rectangle] (89) 10/10 - 2/3", str(r))
+        """ call update with three args """
+        r = Rectangle(10, 10, 10, 10)
+        r.update(89, 2, 3)
+        self.assertEqual("[Rectangle] (89) 10/10 - 2/3", str(r))
 
     def test_update_args_four(self):
-         """ call update with four args """
-         r = Rectangle(10, 10, 10, 10)
-         r.update(89, 2, 3, 4)
-         self.assertEqual("[Rectangle] (89) 4/10 - 2/3", str(r))
+        """ call update with four args """
+        r = Rectangle(10, 10, 10, 10)
+        r.update(89, 2, 3, 4)
+        self.assertEqual("[Rectangle] (89) 4/10 - 2/3", str(r))
 
     def test_update_args_five(self):
         """ call update with five args """
@@ -739,16 +737,16 @@ class TestRectangle_update_kwargs(unittest.TestCase):
         self.assertEqual("[Rectangle] (89) 10/10 - 2/10", str(r))
 
     def test_update_kwargs_three(self):
-         """ call update with three args """
-         r = Rectangle(10, 10, 10, 10)
-         r.update(width=2, id=89, height=3)
-         self.assertEqual("[Rectangle] (89) 10/10 - 2/3", str(r))
+        """ call update with three args """
+        r = Rectangle(10, 10, 10, 10)
+        r.update(width=2, id=89, height=3)
+        self.assertEqual("[Rectangle] (89) 10/10 - 2/3", str(r))
 
     def test_update_kwargs_four(self):
-         """ call update with four kw args """
-         r = Rectangle(10, 10, 10, 10)
-         r.update(height=3, x=4, id=89, width=2)
-         self.assertEqual("[Rectangle] (89) 4/10 - 2/3", str(r))
+        """ call update with four kw args """
+        r = Rectangle(10, 10, 10, 10)
+        r.update(height=3, x=4, id=89, width=2)
+        self.assertEqual("[Rectangle] (89) 4/10 - 2/3", str(r))
 
     def test_update_kwargs_five(self):
         """ call update with five kw args """
@@ -779,6 +777,7 @@ class TestRectangle_update_kwargs(unittest.TestCase):
         r.update(ab=4, cd=6)
         self.assertEqual("[Rectangle] (10) 10/10 - 10/10", str(r))
 
+
 class TestRectangle_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Rectangle class."""
 
@@ -797,6 +796,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
         r = Rectangle(10, 2, 4, 1, 2)
         with self.assertRaises(TypeError):
             r.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()

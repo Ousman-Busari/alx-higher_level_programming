@@ -33,7 +33,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """ updates the instances of the attribute """
         if args and len(args) > 0:
-            if args[0] != None:
+            if args[0] is not None:
                 self.id = args[0]
             if len(args) > 1:
                 self.size = args[1]
