@@ -774,7 +774,7 @@ class TestRectangle_update_kwargs(unittest.TestCase):
         r.update(89, 2, height=3, y=5)
         self.assertEqual("[Rectangle] (89) 10/10 - 2/10", str(r))
 
-    def test_update_kwargs_order_width_before_height(self):
+    def test_update_kwargs_all_absent(self):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(ab=4, cd=6)
         self.assertEqual("[Rectangle] (10) 10/10 - 10/10", str(r))

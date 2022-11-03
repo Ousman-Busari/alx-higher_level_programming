@@ -92,10 +92,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """ overrides the defualt string representation """
-        string = '[Rectangle] ' + '(' + str(self.id) + ') '
-        string += str(self.__x) + '/' + str(self.__y) + ' - '
-        string += str(self.__width) + '/' + str(self.__height)
-        return string
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                                       self.width, self.height)
+
 
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute """
@@ -112,7 +111,7 @@ class Rectangle(Base):
                 self.y = args[4]
         elif len(kwargs) > 0:
             for k, v in kwargs.items():
-                if k == "id":
+                if k == "id" and v is not None:
                     self.id = v
                 if k == "width":
                     self.width = v
@@ -122,3 +121,13 @@ class Rectangle(Base):
                     self.x = v
                 if k == "y":
                     self.y = v
+
+    def to_dictionary(self):
+        """ returns the dictionary representation of Rectangle instance """
+        return {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width
+        }
