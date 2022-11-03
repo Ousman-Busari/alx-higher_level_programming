@@ -7,6 +7,7 @@ import io
 import sys
 from models.rectangle import Rectangle
 from models.square import Square
+import unittest
 
 class TestSquare_init(unittest.TestCase):
     """ defines test cases for the initliazation of instance of Square """
@@ -38,10 +39,11 @@ class TestSquare_init(unittest.TestCase):
 
     def test_list_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(4, [x])
+            Square(4, ["x"])
 
     def test_negative_x(self):
-        with self.assertRaisesRegex(ValueError, "x must be >= 0")
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            Square(4, -2, 3)
 
     def test_float_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
@@ -61,7 +63,7 @@ class TestSquare_order_of_initialization(unittest.TestCase):
             Square("size", "x", 3)
 
     def test_size_before_y(self):
-        with self.assertRaisesRegex(TypeError, "width must be > 0"):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(-4, 2, "y")
 
     def test_x_before_y(self):
@@ -133,7 +135,7 @@ class TestSquare_update_args(unittest.TestCase):
             s.update(4, 6, "x", "y")
 
 
-class TestSquare_update_kwargs(self):
+class TestSquare_update_kwargs(unittest.TestCase):
     """ defines test cases for the update method of Square using kwargs """
 
     def test_absent_kwargs(self):
@@ -159,12 +161,12 @@ class TestSquare_update_kwargs(self):
     def test_y_size_x_id_kwargs(self):
         s = Square(4, 2, 3, 12)
         s.update(y=5, size=7, id=8, x=4)
-        self.assertEqual("[Square] (8) 4/8 - 7", str(s))
+        self.assertEqual("[Square] (8) 4/5 - 7", str(s))
 
     def test_update_absent_and_present_kwargs(self):
         s = Square(4, 2, 3, 12)
         s.update(old=5, id=7, new=8, y=4)
-        self.assertEqual("[Square] (7) 8/4 - 7", str(s))
+        self.assertEqual("[Square] (7) 2/4 - 4", str(s))
 
     def test_update_kwargs_twice(self):
         s = Square(4, 2, 3, 12)
@@ -181,3 +183,25 @@ class TestSquare_update_kwargs(self):
         s = Square(4, 2, 3, 7)
         s.update(absent="8", key="5", word="7")
         self.assertEqual("[Square] (7) 2/3 - 4",str(s))
+
+class TestSquare_to_dictionary(unittest.TestCase):
+    """Unittests for testing to_dictionary method of the Square class."""
+
+    def test_to_dictionary_output(self):
+        s = Square(10, 2, 1, 1)
+        correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
+        self.assertDictEqual(correct, s.to_dictionary())
+
+    def test_to_dictionary_no_object_changes(self):
+        s1 = Square(10, 2, 1, 2)
+        s2 = Square(1, 2, 10)
+        s2.update(**s1.to_dictionary())
+        self.assertNotEqual(s1, s2)
+
+    def test_to_dictionary_arg(self):
+        s = Square(10, 10, 10, 10)
+        with self.assertRaises(TypeError):
+            s.to_dictionary(1)
+
+if __name__ == "__main__":
+    unittest.main()
