@@ -2,4 +2,4 @@
 -- table first_table of the database hbtn_0c_0 in MySQL server
 SELECT COUNT(id)
 FROM first_table
-WHERE id;
+WHERE id = 89;
