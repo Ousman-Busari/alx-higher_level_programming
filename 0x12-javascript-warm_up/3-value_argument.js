@@ -1,6 +1,4 @@
 #!/usr/bin/node
-const args = process.argv;
-const argsCount = args.length;
-console.log(argsCount === 2
+console.log(typeof process.argv[2] === 'undefined'
   ? 'No argument'
-  : args[2]);
+  : process.argv[2]);
