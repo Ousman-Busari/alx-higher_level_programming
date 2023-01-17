@@ -14,9 +14,7 @@ if __name__ == "__main__":
     commits = r.json()
 
     try:
-        if type(commits) == dict:
-            pass
-        else:
+        if type(commits) == list:
             for i in range(10):
                 print("{}: {}".format(
                     commits[i].get("sha"),
