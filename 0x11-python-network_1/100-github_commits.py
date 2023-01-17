@@ -14,11 +14,9 @@ if __name__ == "__main__":
     commits = r.json()
 
     try:
-        for i, obj in enumerate(commits):
-            if i == 10:
-                    break
-            if type(obj) is dict:
-                name = obj.get('commit').get('author').get('name')
-                print("{}: {}".format(obj.get('sha'), name))
-    except ValueError as invalid_json:
+        for i in range(10):
+            print("{}: {}".format(
+                commits[i].get("sha"),
+                commits[i].get("commit").get("author").get("name")))
+    except IndexError:
         pass
