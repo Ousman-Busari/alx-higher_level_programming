@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""list 10 commits (from the most recent to oldest) of
-the repository “rails” by the user “rails”
+"""Lists the 10 most recent commits on a given GitHub repository.
+
+Usage: ./100-github_commits.py <repository name> <repository owner>
 """
 import requests
 import sys
@@ -14,10 +15,9 @@ if __name__ == "__main__":
     commits = r.json()
 
     try:
-        if type(commits) == list:
-            for i in range(10):
-                print("{}: {}".format(
-                    commits[i].get("sha"),
-                    commits[i].get("commit").get("author").get("name")))
+        for i in range(10):
+            print("{}: {}".format(
+                commits[i].get("sha"),
+                commits[i].get("commit").get("author").get("name")))
     except IndexError:
         pass
